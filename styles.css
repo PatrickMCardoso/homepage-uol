@@ -330,6 +330,90 @@ body {
     align-items: center;
 }
 
+/* Container para shop-cards */
+#shop-cards {
+    padding: 40px 20px;
+    background-color: var(--light-background-color);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas para o layout no desktop */
+    grid-template-rows: auto auto;
+    gap: 15px;
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card figure {
+    position: relative;
+    margin: 0;
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card figcaption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 15px;
+    background-color: rgba(45, 139, 192, 0.75); 
+    color: var(--light-text-color);
+    z-index: 2;
+}
+
+.product-card h6 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-card .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 10px;
+    color: var(--light-text-color);
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+.product-card:hover .btn {
+    background-color: rgba(255, 255, 255, 0.4); 
+    color: var(--light-text-color);
+}
+
+
+@media (min-width: 769px) {
+    .card-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 20px;
+    }
+
+    /* Aumentar a altura da imagem à esquerda para ocupar o espaço de duas linhas */
+    .card-grid .product-card:first-child {
+        grid-row: span 2; /* Ocupa duas linhas */
+        height: 100%; /* Ocupa toda a altura disponível */
+    }
+
+    .card-grid figure {
+        height: 100%;
+    }
+}
 
 @media (max-width: 768px) {
     .top-header {
@@ -397,5 +481,26 @@ body {
     #clients article {
         display: flex;
         flex-direction: column;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr; /* Uma coluna no mobile */
+        gap: 20px;
+    }
+
+    .product-card h6 {
+        font-size: 20px;
+    }
+
+    .product-card figcaption {
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 15px;
+    }
+
+    .product-card .btn {
+        font-size: 14px;
+        padding: 6px 12px;
     }
 }
