@@ -317,6 +317,19 @@ body {
     color: var(--light-text-color);
 }
 
+#clients article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clients img {
+    padding: 30px;
+    width: 149px;
+    height: auto;
+    align-items: center;
+}
+
 
 @media (max-width: 768px) {
     .top-header {
@@ -379,5 +392,10 @@ body {
     #container-fluid button {
         font-size: 14px;
         padding: 8px 16px;
+    }
+
+    #clients article {
+        display: flex;
+        flex-direction: column;
     }
 }
