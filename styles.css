@@ -1,0 +1,277 @@
+/* Importando a fonte Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-background-color: #252B42;
+    --light-text-color: #FFFFFF;
+    --second-text-color: #737373; 
+    --text-color:#252B42;
+    --gap-size: 10px; 
+    --linear-gradiente: 90deg, #96E9FB 0%, #ABECD6 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;    
+}
+
+/*PROMO*/
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 24px 9px 24px;
+    background-color: var(--dark-background-color);
+    color: var(--light-text-color);
+}
+
+.contact-info {
+    display: flex;
+    gap: var(--gap-size);
+    font-size: 14px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    margin-left: 24px;
+}
+
+.contact-info p:nth-child(2) {
+    padding-left: 80px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: var(--light-text-color);
+}
+
+.promo {
+    color: var(--light-text-color);
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-size);
+    font-size: 14px;
+}
+
+.social-links p {
+    margin-right: 8px;
+}
+
+.social-links ul {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.social-links img {
+    width: 18px;
+    height: 18px;
+}
+
+/*HEADER*/
+
+#shop-header {
+    display: flex;
+    padding: 15px 24px;
+    background-color: white;
+}
+
+#shop-header a {
+    text-decoration: none;
+}
+
+#shop-header .logo h3 {
+    font-size: 24px;
+    color: var(--text-color);
+    padding: 0 0 0 24px;
+}
+
+.page-options ul,
+.user-actions ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: var(--gap-size);
+}
+
+.page-options {
+    margin-left: 180px; 
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    padding-top: 5px; 
+}
+
+.page-options .nav-links li a,
+.user-actions ul li a {
+    text-decoration: none;
+    color: var(--second-text-color);
+    font-size: 14px;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.user-actions ul li a img {
+    margin-right: 5px;
+}
+
+.user-actions ul:last-of-type {
+    gap: 15px;
+}
+
+/* Shop Header */
+#shop-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px;
+    background-color: #FFFFFF;
+    color: var(--second-text-color);
+}
+
+#shop-header h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--second-text-color);
+}
+
+.page-options .nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.page-options .nav-links li a {
+    text-decoration: none;
+    color: var(--second-text-color);
+    font-size: 14px;
+}
+
+.user-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.user-actions ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.user-actions .login-register li a,
+.user-actions .icons li a {
+    text-decoration: none;
+    color: var(--second-text-color);
+    font-size: 14px;
+}
+
+.user-actions .icons li a img {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+/* Mobile Header */
+.mobile-header {
+    display: none;
+}
+
+.hamburger-menu img,
+.mobile-user-actions img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-left:12px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #FFFFFF;
+}
+
+.mobile-menu .mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    gap: 20px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu .mobile-nav-links li a {
+    color: var(--second-text-color);
+    font-size: 30px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    .top-header {
+        display: none;
+    }
+    
+    #shop-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .page-options,
+    .user-actions {
+        display: none;
+    }
+
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        position: absolute;
+        right: 24px;
+    }
+
+    .hamburger-menu {
+        cursor: pointer;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+}

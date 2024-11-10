@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js" defer></script>
     <title>Bandage</title>
 </head>
 <body>
@@ -13,7 +15,7 @@
         </address>
 
         <section class="promo">
-            <p>Follow Us and get a chaance to win 80% off</p>
+            <p>Follow Us and get a chance to win 80% off</p>
         </section>
 
         <nav class="social-links" aria-label="Social media">
@@ -28,19 +30,19 @@
     </header>
     <main>
         <section id="shop-header">
-            <a href="#" >
+            <a href="#" class="logo">
                 <h3>Bandage</h3>
             </a>
-            <nav class="page-options" aria-label="Page options">        
+            <nav class="page-options" aria-label="Page options">
                 <ul class="nav-links">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Shop <img src="./img/arrow-icon.png" alt=""></a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Pages</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop <img src="./img/icons/arrow-icon.png" alt=""></a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Pages</a></li>
                 </ul>
-
+            </nav>
             <nav class="user-actions" aria-label="User actions">
                 <ul>
                     <li><a href="#"><img src="./img/icons/person-icon.png" alt="Person icon"> Login /</a></li>
@@ -50,11 +52,33 @@
                     <li><a href="#"><img src="./img/icons/search-icon.png" alt="Search icon"></a></li>
                     <li><a href="#"><img src="./img/icons/shoppingcart-icon.png" alt="Cart icon"> 1</a></li>
                     <li><a href="#"><img src="./img/icons/heart-icon.png" alt="Heart icon"> 1</a></li>
-                </ul> 
+                </ul>
             </nav>
+
+            <div class="mobile-header">
+                <div class="mobile-user-actions">
+                    <a href="#"><img src="./img/icons/search2-icon.png" alt="Search icon"></a>
+                    <a href="#"><img src="./img/icons/cart-icon.png" alt="Cart icon"></a>
+                </div>
+                <div class="hamburger-menu">
+                    <img src="./img/icons/menu-icon.png" alt="Menu icon">
+                </div>
+                
+            </div>
         </section>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Pricing</a></li>                
+                <li><a href="#">Contact</a></li>                
+            </ul>            
+        </div>
+        
         <section id="container-fluid">            
-            <img src="./img/woman-img.png" alt="Background woman">
+            <img src="./img//images/woman-img.png" alt="Background woman">
             <h5>SUMMER 2020</h5>
             <h1>NEW COLLECTION</h1>
             <p>We know how large objects will act, but things on a small scale.</p>
