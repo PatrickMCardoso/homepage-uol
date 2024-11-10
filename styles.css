@@ -10,14 +10,18 @@
 :root {
     --dark-background-color: #252B42;
     --light-text-color: #FFFFFF;
+    --primary-color: #23A6F0;
     --second-text-color: #737373; 
     --text-color:#252B42;
     --gap-size: 10px; 
     --linear-gradiente: 90deg, #96E9FB 0%, #ABECD6 100%;
+    --hover-text-color: #2A7CC7;
+
 }
 
 body {
     font-family: 'Montserrat', sans-serif;    
+    overflow-x: hidden;
 }
 
 /*PROMO*/
@@ -239,6 +243,80 @@ body {
     text-decoration: none;
 }
 
+/* Container Fluid */
+#container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;    
+    padding: 50px 20px;
+    margin: 20px 70px 20px 70px;
+    height: 622px; /* Ajuste conforme necessário */
+    background: linear-gradient(var(--linear-gradiente));
+    border-radius: 20px;
+    color: var(--light-text-color);
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+#container-fluid img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#container-fluid h5 {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--hover-text-color);
+    margin-bottom: 10px;
+    z-index: 2;
+}
+
+#container-fluid h1 {
+    font-size: 58px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-color);
+    z-index: 2;
+}
+
+#container-fluid p {
+    font-size: 20px;
+    color: var(--second-text-color);
+    margin: 15px 0;
+    z-index: 2;
+}
+
+#container-fluid button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+#container-fluid button:hover {
+    background-color: #333333;
+}
+
+#container-fluid button a {
+    text-decoration: none;
+    color: var(--light-text-color);
+}
+
 
 @media (max-width: 768px) {
     .top-header {
@@ -273,5 +351,33 @@ body {
 
     .mobile-menu.active {
         display: flex;
+    }
+
+    #container-fluid {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    #container-fluid img {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    #container-fluid h1 {
+        font-size: 32px;
+    }
+
+    #container-fluid h5,
+    #container-fluid p {
+        font-size: 14px;
+    }
+
+    #container-fluid button {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
