@@ -558,7 +558,6 @@ body {
     line-height: 20px;
 }
 
-/* Estilos para desktop */
 #features {
     padding: 40px;
     text-align: center;
@@ -582,7 +581,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* Estilizando os artigos dentro de #features para desktop */
 #features article {
     display: flex;
     flex-direction: column;
@@ -604,18 +602,188 @@ body {
 
 #features article h3 {
     font-size: 1.2rem;
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 10px;
     text-align: center;
 }
 
 #features article p {
     font-size: 1rem;
-    color: #555;
+    color: var(--second-text-color);
     text-align: center;
     line-height: 1.6;
 }
 
+/* Estilos gerais da seção do blog */
+#blog {
+    padding: 20px;
+    background-color: white;
+}
+
+#blog h6 {
+    font-size: 14px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#featured-posts-title {
+    font-size: 40px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo dos cards de produto */
+.product-card2 {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+    max-width: 580px;
+    max-height: 470px;
+    width: 100%;
+}
+
+.product-card2:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem do produto */
+.product-image {
+    width: 50%;
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+}
+
+.tag-sale {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #E74040;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border-radius: 4px;
+}
+
+.product-actions {
+    position: absolute;
+    bottom: 20px;
+    right: 60px;
+}
+
+.product-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+/* Informações do produto */
+.product-info {
+    padding: 15px;
+    text-align: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.department {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-title {
+    font-size: 16px;
+    color: var(--text-color);
+    margin: 5px 0;
+}
+
+.product-description {
+    font-size: 14px;
+    color: var(--second-text-color);
+    margin: 10px 0;
+    
+}
+
+/* Estilos de stats e meta info */
+.product-stats {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: var(--second-text-color);
+    list-style-type: none;
+}
+
+.product-meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: var(--second-text-color);
+    list-style-type: none;
+}
+
+.product-stats .icon,
+.product-price {
+    margin-top: 20px;
+    font-weight: bold;
+    color:#23856D;
+}
+
+.product-price del {
+    color: var(--second-text-color);
+}
+
+.color-options img {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: 5px;
+}
+
+/* Botão Learn More */
+.learn-more {
+    width: 50%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-color);
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 90px;
+}
+
+.learn-more:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
 
 @media (min-width: 769px) {
     .card-grid {
@@ -798,5 +966,13 @@ body {
         width: 100%;
         max-width: 350px;
         margin-bottom: 20px;
+    }
+
+    .product-container {
+        flex-direction: column;
+    }
+
+    .product-card2 {
+        max-width: 100%;
     }
 }
