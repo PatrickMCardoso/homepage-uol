@@ -239,16 +239,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-direction: column;    
     padding: 50px 20px;
-    margin: 20px 70px 20px 70px;
-    height: 622px; /* Ajuste conforme necessário */
+    margin: 20px 70px;
+    height: 622px; 
     background: linear-gradient(var(--linear-gradiente));
     border-radius: 20px;
     color: var(--light-text-color);
-    text-align: left;
     overflow: hidden;
     position: relative;
+}
+
+#container-fluid .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2;
+    position: relative;
+    max-width: 50%; 
+    margin-left: 30px;
 }
 
 #container-fluid img {
@@ -267,7 +275,6 @@ body {
     letter-spacing: 2px;
     color: var(--hover-text-color);
     margin-bottom: 10px;
-    z-index: 2;
 }
 
 #container-fluid h1 {
@@ -275,14 +282,12 @@ body {
     font-weight: 700;
     margin: 0;
     color: var(--text-color);
-    z-index: 2;
 }
 
 #container-fluid p {
     font-size: 20px;
     color: var(--second-text-color);
     margin: 15px 0;
-    z-index: 2;
 }
 
 #container-fluid button {
@@ -293,7 +298,6 @@ body {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 2;
     transition: background-color 0.3s ease;
 }
 
@@ -309,7 +313,8 @@ body {
 #clients article {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 0 200px 0 200px;
 }
 
 #clients img {
@@ -801,6 +806,7 @@ body {
 .footer-container p {
     color: var(--second-text-color);
     font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .footer-column h5 {
@@ -970,6 +976,11 @@ body {
         margin: 10px;
     }
 
+    #container-fluid .content {
+        justify-content: center;
+        align-items: center;
+    }
+
     #container-fluid img {
         position: static;
         width: 100%;
@@ -979,11 +990,15 @@ body {
 
     #container-fluid h1 {
         font-size: 32px;
+        justify-content: center;
+        align-items: center;
     }
 
     #container-fluid h5,
     #container-fluid p {
         font-size: 14px;
+        justify-content: center;
+        align-items: center;
     }
 
     #container-fluid button {
@@ -1090,6 +1105,7 @@ body {
     }
 
     .footer-container {
+        max-width: 400px;
         align-items: flex-start;
     }
 
