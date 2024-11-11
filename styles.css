@@ -1,4 +1,3 @@
-/* Importando a fonte Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 * {
@@ -12,6 +11,7 @@
     --light-text-color: #FFFFFF;
     --primary-color: #23A6F0;
     --second-text-color: #737373; 
+    --secondary-color-1: #23856D;
     --text-color:#252B42;
     --gap-size: 10px; 
     --linear-gradiente: 90deg, #96E9FB 0%, #ABECD6 100%;
@@ -338,7 +338,6 @@ body {
 
 .card-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas para o layout no desktop */
     grid-template-rows: auto auto;
     gap: 15px;
 }
@@ -394,6 +393,129 @@ body {
 .product-card:hover .btn {
     background-color: rgba(255, 255, 255, 0.4); 
     color: var(--light-text-color);
+}
+
+/* Container principal */
+#product-cards {
+    padding: 40px 20px;
+    background-color: var(--light-background-color);
+    gap: 0;
+}
+
+.product-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-header h2 {
+    font-size: 17px;
+    color: var(--second-text-color);
+}
+
+.product-header h3 {
+    font-size: 24px;
+    color: var(--secondary-color);
+    margin: 10px 0;
+}
+
+.product-header p {
+    font-size: 14px;
+    color: var(--second-text-color);
+}
+
+/* Grade de produtos */
+.product-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5, 1fr); 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    max-width: 200px; 
+    margin: 0 auto;   
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item figure {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+    transform: scale(1.1);
+}
+
+.product-item header,
+.product-item footer {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.product-item header h4 {
+    font-size: 16px;
+    color: var(--text-color);
+    margin: 10px 0 5px;
+}
+
+.product-item header p {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.product-item footer .old-price {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.product-item footer .new-price {
+    color: var(--secondary-color-1);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Botão "Load More" */
+.load-more {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.load-more button {
+    padding: 10px 30px;
+    font-size: 14px;
+    line-height: 22px;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.load-more button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
 
@@ -502,5 +624,30 @@ body {
     .product-card .btn {
         font-size: 14px;
         padding: 6px 12px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Uma coluna no mobile */
+    }
+
+    .product-header h2 {
+        font-size: 15px;
+    }
+
+    .product-header h3 {
+        font-size: 18px;
+    }
+
+    .product-header p {
+        font-size: 14px;
+    }
+
+    .product-item header h4 {
+        font-size: 16px;
+    }
+
+    .product-item footer .old-price,
+    .product-item footer .new-price {
+        font-size: 14px;
     }
 }
