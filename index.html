@@ -435,65 +435,77 @@
         </section>
     </main>
 
-        <footer>
-            <div class="footer-container">
+    <footer>
+        <div class="footer-container">
+            <!-- Seção de Marca -->
+            <div class="footer-brand">
                 <h2>Bandage</h2>
-        
-                <ul class="social-links">
-                    <li><a href="#" aria-label="Facebook"><img src="./img/icons/facebook2-icon.png" alt="Facebook icon"></a></li>
-                    <li><a href="#" aria-label="Instagram"><img src="./img/icons/instagram2-icon.png" alt="Instagram icon"></a></li>
-                    <li><a href="#" aria-label="Twitter"><img src="./img/icons/twitter2-icon.png" alt="Twitter icon"></a></li>
-                </ul>
-        
-                <table class="footer-links">
-                    <tr>
-                        <th>Company Info</th>
-                        <th>Legal</th>
-                        <th>Features</th>
-                        <th>Resources</th>
-                        <th>Get In Touch</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#">About Us</a><br>
-                            <a href="#">Carrier</a><br>
-                            <a href="#">We are hiring</a><br>
-                            <a href="#">Blog</a>
-                        </td>
-                        <td>
-                            <a href="#">About Us</a><br>
-                            <a href="#">Carrier</a><br>
-                            <a href="#">We are hiring</a><br>
-                            <a href="#">Blog</a>
-                        </td>
-                        <td>
-                            <a href="#">Business Marketing</a><br>
-                            <a href="#">User Analytic</a><br>
-                            <a href="#">Live Chat</a><br>
-                            <a href="#">Unlimited Support</a>
-                        </td>
-                        <td>
-                            <a href="#">iOS & Android</a><br>
-                            <a href="#">Watch a Demo</a><br>
-                            <a href="#">Customers</a><br>
-                            <a href="#">API</a>
-                        </td>
-                        <td>
-                            <form action="#" method="post">
-                                <label for="email" class="visually-hidden">Your Email</label>
-                                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                                <button type="submit">Subscribe</button>
-                                <p>Lore imp sum dolor Amit</p>
-                            </form>
-                        </td>
-                    </tr>
-                </table>
-        
-                <tfoot>
-                    <p>Made With Love By Finland All Right Reserved</p>
-                </tfoot>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><img src="./img/icons/facebook2-icon.png" alt="Facebook icon"></a>
+                    <a href="#" aria-label="Instagram"><img src="./img/icons/instagram2-icon.png" alt="Instagram icon"></a>
+                    <a href="#" aria-label="Twitter"><img src="./img/icons/twitter2-icon.png" alt="Twitter icon"></a>
+                </div>  
             </div>
-        </footer>
+    
+            <!-- Seção de Links -->
+            <div class="footer-links">
+                <!-- Coluna 1: Company Info -->
+                <div class="footer-column">
+                    <h5>Company Info</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Carrier</a></li>
+                        <li><a href="#">We are hiring</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Coluna 2: Legal -->
+                <div class="footer-column">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Coluna 3: Features -->
+                <div class="footer-column">
+                    <h5>Features</h5>
+                    <ul>
+                        <li><a href="#">Business Marketing</a></li>
+                        <li><a href="#">User Analytics</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">Unlimited Support</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Coluna 4: Resources -->
+                <div class="footer-column">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="#">iOS & Android</a></li>
+                        <li><a href="#">Watch a Demo</a></li>
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Coluna 5: Get In Touch -->
+                <div class="footer-column">
+                    <h5>Get In Touch</h5>
+                    <form action="#" method="post" class="subscribe-form" onsubmit="return validateEmail(event)">                        
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <button type="submit">Subscribe</button>
+                        <p class="form-description">Lore imp sum dolor Amit</p>
+                    </form>
+                </div>               
+            </div>      
+            <p>Made With Love By Finland All Right Reserved</p>                                 
+        </div>
+    </footer>
      
 </body>
 </html>
