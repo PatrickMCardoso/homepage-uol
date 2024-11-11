@@ -260,8 +260,6 @@ body {
     position: relative;
 }
 
-
-
 #container-fluid img {
     position: absolute;
     top: 0;
@@ -518,6 +516,48 @@ body {
     color: #fff;
 }
 
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.content-images {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.content-images img {
+    width: 100%;
+    max-width: 300px; 
+}
+
+.content-text {
+    max-width: 600px;
+}
+
+.content-text h5 {
+    font-size: 16px;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.content-text h2 {
+    font-size: 40px;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.content-text p {
+    font-size: 14px;
+    color: var(--second-text-color);
+    line-height: 20px;
+}
+
 
 @media (min-width: 769px) {
     .card-grid {
@@ -526,10 +566,9 @@ body {
         gap: 20px;
     }
 
-    /* Aumentar a altura da imagem à esquerda para ocupar o espaço de duas linhas */
     .card-grid .product-card:first-child {
-        grid-row: span 2; /* Ocupa duas linhas */
-        height: 100%; /* Ocupa toda a altura disponível */
+        grid-row: span 2; 
+        height: 100%; 
     }
 
     .card-grid figure {
@@ -606,7 +645,7 @@ body {
     }
 
     .card-grid {
-        grid-template-columns: 1fr; /* Uma coluna no mobile */
+        grid-template-columns: 1fr; 
         gap: 20px;
     }
 
@@ -627,7 +666,7 @@ body {
     }
 
     .product-grid {
-        grid-template-columns: 1fr; /* Uma coluna no mobile */
+        grid-template-columns: 1fr; 
     }
 
     .product-header h2 {
@@ -649,5 +688,31 @@ body {
     .product-item footer .old-price,
     .product-item footer .new-price {
         font-size: 14px;
+    }
+
+    #content {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .content-text {
+        order: 1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .content-images {
+        order: 2; 
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .content-images img {
+        width: 100%; 
+        max-width: none;
     }
 }
