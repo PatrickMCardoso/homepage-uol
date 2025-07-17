@@ -76,9 +76,5 @@ Este projeto não possui API própria. Toda a lógica está implementada no fron
 
 ## Licença
 
-Este projeto está licenciado sob a [MIT License](LICENSE). Sinta-se livre para utilizar, modificar e distribuir conforme as condições da licença.
-
----
-
-> Desenvolvido por Patrick M Cardoso para o desafio Compass UOL - Trilha de Front-end.
+Este projeto está licenciado sob a MIT. Sinta-se livre para utilizar, modificar e distribuir conforme as condições da licença.
 
